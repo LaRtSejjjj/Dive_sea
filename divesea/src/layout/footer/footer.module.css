@@ -1,0 +1,17 @@
+.footer{
+    background-color: #141416;
+    height: 200px;
+    padding: 66px 0 79px;
+}
+
+.menu{
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    color: #B9B9B9;
+    gap: 70px;
+}
+
+.menu__item{
+    cursor: pointer;
+}

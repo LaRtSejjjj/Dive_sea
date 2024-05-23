@@ -1,0 +1,19 @@
+.label{
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 124%;
+    margin-bottom: 20px;
+}
+.input{
+    width: 100%;
+    display: block;
+    height: 62px;
+    border-radius: 12px;
+    padding: 23px 27px;
+    border: none;
+    font-size: 14px;
+    line-height: 124%;
+    color: #9596A6;
+    background-color: #EFEFEF;
+}
