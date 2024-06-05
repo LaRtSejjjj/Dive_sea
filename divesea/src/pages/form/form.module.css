@@ -1,0 +1,86 @@
+.wrapper {
+    width: 1248px;
+    margin: 202px auto 217px;
+}
+
+
+.form {
+    width: 50%;
+
+}
+
+
+.p {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 124%;
+    margin-bottom: 20px;
+}
+
+.text {
+    display: flex;
+    gap: 50px;
+}
+
+.button{
+    width: 224px;
+    height: 63px;
+
+}
+
+.download{
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 63px;
+    width: 327px;
+}
+
+.program{
+    width: 60%;
+    margin-top: 50px;
+}
+
+.creat{
+    width: 100%;
+    
+    margin-top: 50px;
+}
+
+.input{
+    margin-top: 50px;
+}
+
+.date{
+    margin-top: 50px;
+}
+
+.time{
+    margin-top: 50px;
+}
+
+.banner{
+    margin-top: 100px;
+}
+
+.ticket{
+    display: flex;
+    background-color: #EFEFEF;
+    border-radius: 12px;
+}
+
+.money{
+    border: none;
+    background-color: #efefef00;
+    
+}
+.money::placeholder{
+    padding-left: 5px;
+    font-size: 17px;
+    color: #9596A6;
+}
+.div{
+    width: 70%;
+    margin-top: 50px;
+}

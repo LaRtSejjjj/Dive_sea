@@ -1,0 +1,31 @@
+.banner {
+    width: 468px;
+    height: 413px;
+    background: #FCFCFD;
+    box-shadow: 0px -81.98px 80px rgba(0, 0, 0, 0.05), 0px 81.9848px 81.9848px -61.4886px rgba(15, 15, 15, 0.1);
+    border-radius: 30.7443px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.text {
+    width: 178px;
+    height: 52px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #777E91;
+}

@@ -5,15 +5,22 @@
     line-height: 124%;
     margin-bottom: 20px;
 }
+.div{
+    background-color: #EFEFEF;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding: 23px 27px;
+}
 .input{
     width: 100%;
-    display: block;
-    height: 62px;
-    border-radius: 12px;
-    padding: 23px 27px;
+    height: 100%;
     border: none;
-    font-size: 14px;
+    font-size: 17px;
     line-height: 124%;
     color: #9596A6;
-    background-color: #EFEFEF;
+    background-color: #efefef00;
+}
+.input::placeholder{
+    color: #9596A6;
 }

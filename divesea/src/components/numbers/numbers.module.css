@@ -1,0 +1,13 @@
+.h1{
+    font-size: 30px;
+    color: #141416;
+    font-weight: 600;
+    text-align: center;
+}
+
+.p{
+    font-size: 11px;
+    color: #848586;
+    font-weight: 400;
+    text-align: center;
+}

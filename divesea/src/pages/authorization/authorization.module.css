@@ -1,0 +1,20 @@
+.wrapper{
+    width: 702px;
+    margin: 202px auto 217px;
+}
+.form{
+    width: 100%;
+}
+
+.input{
+    margin-bottom: 24px;
+}
+
+.p {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 124%;
+    margin-bottom: 20px;
+}

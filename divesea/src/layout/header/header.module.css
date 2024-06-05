@@ -1,0 +1,39 @@
+.header{
+    margin-top: 10px;
+}
+.input{
+    background-color: #EFEFEF;
+    font-size: 16px;
+    padding-left: 15px;
+    margin: 2px;
+    border: none;
+}
+
+.input::placeholder{
+    color: #B9B9B9;
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 62px;
+    border-radius: 12px;
+    padding: 23px 27px;
+    border: none;
+    line-height: 124%;
+    background-color: #EFEFEF;
+}
+
+.menu{
+    display: flex;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #606060;
+    gap: 70px;
+}
+
+.img{
+    margin: 0px 10px;
+}

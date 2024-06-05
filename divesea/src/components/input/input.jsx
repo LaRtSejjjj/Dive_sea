@@ -1,3 +1,5 @@
+import pen from './../../assets/img/pen.svg';
+
 import styles from './input.module.css';
 
 const Input = ({ name, placeholder }) => {
@@ -6,7 +8,10 @@ const Input = ({ name, placeholder }) => {
       <label htmlFor={name} className={styles.label}>
         {name}
       </label>
-      <input type="text" id={name} placeholder={placeholder} className={styles.input} />
+      <div className={styles.div} >
+        <input type="text" id={name} placeholder={placeholder} className={styles.input} />
+        <img src={pen}/>
+      </div>
     </div>
   );
 };
