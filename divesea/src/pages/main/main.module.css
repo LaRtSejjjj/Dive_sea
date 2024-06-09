@@ -32,6 +32,7 @@
     justify-content: center;
     background-color: black;
     border-radius: 12px;
+    cursor: pointer;
     width: 55px;
     height: 57px;
 }
@@ -44,6 +45,7 @@
     border-radius: 12px;
     padding: 15px;
     color: #1A202C;
+    cursor: pointer;
 }
 
 /*cart*/

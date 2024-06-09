@@ -20,6 +20,9 @@ const Authorization = () => {
         </div>
       </form>
       <Button button="Вход"/>
+      <div className={styles.button}>
+        <Button button="Зарегистрироваться"/>
+      </div>
     </div>
   );
 };

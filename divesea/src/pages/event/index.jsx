@@ -6,20 +6,20 @@ import Text from '../../components/text/text';
 
 import person from './../../assets/img/person.svg';
 import arrow from './../../assets/img/arrow.svg';
-import poster from './../../assets/img/poster.svg';
 
 import styles from './event.module.css';
 import Speaker from '../../components/speaker/speaker';
 import Notice from '../../components/notice/notice';
+import SpeakerBack from '../../components/speakerback/speakerback';
 
 
 const Event = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.arrow}>
+      <button className={styles.arrow}>
         <img src={arrow}/>
         Мероприятие
-      </div>
+      </button>
       <div className={styles.cart}>
         <img className={styles.img} src="https://i.pinimg.com/originals/7d/06/21/7d0621d52067878efbdb6011caa9c70d.jpg" />
         <div>
@@ -76,8 +76,12 @@ const Event = () => {
       <div>
         <Description title="Спикеры"/>
         <div className={styles.speaker}>
-          <Speaker role="Спикер" name="Алла Пугачёва" quantity="32"/>
-          <Speaker role="Спикер" name="Алла Пугачёва" quantity="32"/>
+          <Speaker img="https://i.pinimg.com/originals/a7/4d/ed/a74ded8b3868396d05fde493923ddae0.png" 
+          role="Спикер" name="Алла Пугачёва" quantity="32"/>
+          <Speaker img="https://i.pinimg.com/564x/f4/d8/b9/f4d8b90683f0a6b1de0e18284f1fae13.jpg"
+          role="Спикер" name="Алла Пугачёва" quantity="32"/>
+          <SpeakerBack title="О том как я создал свой бизнес" 
+          text="Join Owl Be Yours and HERE , and come ready to mingle. Описание темы." />
         </div>
       </div>
     </div>

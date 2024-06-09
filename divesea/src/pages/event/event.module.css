@@ -85,6 +85,9 @@
     color: #23262F;
     font-size: 31px;
     font-weight: 600;
+    background-color:#ffffff00;
+    border: none;
+    cursor: pointer;
 }
 
 .speaker{

@@ -1,7 +1,6 @@
 import Cart from '../../components/cart/cart';
 import Description from '../../components/description/description';
 import Numbers from '../../components/numbers/numbers';
-import poster from './../../assets/img/poster.svg';
 
 import styles from './account.module.css';
 
@@ -39,10 +38,14 @@ const Account = () => {
                         <div className={styles.menu}>Гость</div>
                     </div>
                     <div className={styles.cart}>
-                        <Cart poster={poster} quantity="200" text="Sun-Glass" />
-                        <Cart poster={poster} quantity="200" text="Sun-Glass" />
-                        <Cart poster={poster} quantity="200" text="Sun-Glass" />
-                        <Cart poster={poster} quantity="200" text="Sun-Glass" />
+                        <Cart poster="https://i.pinimg.com/564x/c3/52/6a/c3526a0b8a8bb4aad2d2ab24a1df95dd.jpg"
+                            quantity="200" text="Sun-Glass" />
+                        <Cart poster="https://i.pinimg.com/564x/0e/f0/51/0ef0515efc9a865d9dceb55141085d8f.jpg"
+                            quantity="200" text="Sun-Glass" />
+                        <Cart poster="https://i.pinimg.com/564x/68/40/50/684050e33b5cd9435c2626b93e21ab39.jpg"
+                            quantity="200" text="Sun-Glass" />
+                        <Cart poster="https://i.pinimg.com/564x/24/be/72/24be7265ab87bbb9a83525d6240f1920.jpg"
+                            quantity="200" text="Sun-Glass" />
                     </div>
                 </div>
             </div>

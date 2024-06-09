@@ -25,11 +25,14 @@
     background: #141416;
     border-radius: 12px;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .img {
     border-radius: 12px;
-    max-width: 244px;
+    width: 244px;
+    height: 289px;
+    object-fit: cover;
 }
 
 .text {

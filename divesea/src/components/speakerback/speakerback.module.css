@@ -3,7 +3,7 @@
     height: 360px;
     box-shadow: 15px 17px 40px #88888836;
     border-radius: 23px;
-    padding: 15px 5px;
+    padding-top: 20px;
     background-color: #ffffff;
 }
 
@@ -17,27 +17,25 @@
 
 .img {
     border-radius: 12px;
-    width: 188px;
-    height: 223px;
-    object-fit: cover;
+    max-width: 188px;
 }
 
-.role{
+.title{
     color: #141416;
-    font-size: 14px;
+    font-size: 23px;
     font-weight: 900;
+    line-height: 124%;
 }
 
-.name{
-    color: #141416;
+.text{
+    color: rgb(45, 45, 49);
     font-size: 17px;
     margin: 5px 0px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
-.p{
-    color: #888888;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: 5px;
+.line{
+    background-color: #a1a1a1;
+    height: 1px;
+    margin: 10px 0px;
 }

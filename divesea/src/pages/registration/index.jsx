@@ -26,7 +26,10 @@ const Registration = () => {
           <Select placeholder="Выберете роль" select="Участник"/>
         </div>
       </form>
-      <Button button="Регистрация"/>
+      <Button button="Зарегистрироваться"/>
+      <div className={styles.button}>
+        <Button button="Войти"/>
+      </div>
     </div>
   );
 };
