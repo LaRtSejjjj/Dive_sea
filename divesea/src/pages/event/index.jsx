@@ -10,6 +10,7 @@ import poster from './../../assets/img/poster.svg';
 
 import styles from './event.module.css';
 import Speaker from '../../components/speaker/speaker';
+import Notice from '../../components/notice/notice';
 
 
 const Event = () => {

@@ -1,6 +1,6 @@
 import Input from '../../components/input/input';
-import Select from '../../components/select/select';
 import Title from '../../components/title/title';
+import Button from '../../components/button/button';
 
 import styles from './authorization.module.css';
 
@@ -18,14 +18,8 @@ const Authorization = () => {
         <div className={styles.input}>
           <Input name="Email" placeholder="email" />
         </div>
-        <div className={styles.input}>
-          <Input name="Пароль" placeholder="Введите пароль" />
-        </div>
-        <div className={styles.select}>
-          <div className={styles.p}>Роль</div>
-          <Select placeholder="Выберете роль" select="Участник"/>
-        </div>
       </form>
+      <Button button="Вход"/>
     </div>
   );
 };

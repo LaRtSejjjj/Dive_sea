@@ -1,0 +1,31 @@
+.cart {
+    width: 400px;
+    height: 95px;
+    box-shadow: 15px 17px 40px #88888836;
+    border-radius: 12px;
+    padding: 20px 30px;
+    background-color: #ffffff;
+}
+
+.img{
+    width: 100%;
+    position: absolute;
+    margin-left: 310px;
+}
+
+
+.text{
+    margin-left: 15px;
+}
+
+.h4{
+    color: #000;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.p{
+    color: #9C9C9C;
+    font-size: 15px;
+    font-weight: 400;
+}
