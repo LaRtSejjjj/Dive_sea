@@ -10,13 +10,10 @@ const Authorization = () => {
       <Title title="Авторизация" />
       <form className={styles.form}>
         <div className={styles.input}>
-          <Input name="Имя" placeholder="Введите имя" />
+          <Input name="Email" placeholder="Введите email" />
         </div>
         <div className={styles.input}>
-          <Input name="Номер телефона" placeholder="Введите номер телефона" />
-        </div>
-        <div className={styles.input}>
-          <Input name="Email" placeholder="email" />
+          <Input name="Пароль" placeholder="Введите пароль" />
         </div>
       </form>
       <Button button="Вход"/>
