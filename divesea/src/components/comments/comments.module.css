@@ -1,0 +1,49 @@
+.cart {
+    width: 100%;
+    box-shadow: 15px 17px 40px #88888836;
+    border-radius: 23px;
+    padding: 25px 15px;
+    background-color: #ffffff;
+}
+
+.input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 20px;
+    font-family: 400;
+    line-height: 124%;
+    color: #3C3C40;
+    background-color: #efefef00;
+    min-width: 93%;
+    max-width: 93%;
+    min-height: 50px;
+    outline: none;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.input::placeholder{
+    font-size: 20px;
+    line-height: 124%;
+    color: #adadad;
+    font-family: 400;
+}
+
+.nostars{
+    display: flex;
+    justify-content: end;
+}
+
+.button{
+    background-color: #3C3C40;
+    width: 96px;
+    height: 90px;
+    border-radius: 100px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    cursor: pointer;
+}

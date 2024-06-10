@@ -6,11 +6,14 @@ import Text from '../../components/text/text';
 
 import person from './../../assets/img/person.svg';
 import arrow from './../../assets/img/arrow.svg';
+import stars from './../../assets/img/stars.svg';
 
 import styles from './event.module.css';
 import Speaker from '../../components/speaker/speaker';
 import Notice from '../../components/notice/notice';
 import SpeakerBack from '../../components/speakerback/speakerback';
+import Comments from '../../components/comments/comments';
+import Feedback from '../../components/feedback/feedback';
 
 
 const Event = () => {
@@ -26,6 +29,7 @@ const Event = () => {
           <div className={styles.h1}>Stoplight Party - Young Professionals</div>
           <div className={styles.p}>Join Owl Be Yours and HERE Studio for a fantastic Stoplight Party. At the party, you will be able to choose a green solo cup if you're single, yellow solo cup if your relationship situation is complicated, and red solo cup if you're taken. No matter what your situation is, we encourage to meet and mingle with your neighbors and potential new friends!</div>
           <div className={styles.p}>The party will feature a complimentary beverage (IDs will be checked), bites for purchase, and fantastic people for you to meet! As always, be respectful, kind, and come ready to mingle.</div>
+          <img src={stars}/>
           <div className={styles.creat}>
             <div className="flex aling-center">
               <img src={person} />
@@ -72,6 +76,12 @@ const Event = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <Comments />
+        <Feedback name="Егор"
+        img="https://i.pinimg.com/564x/6d/43/12/6d43125cf7192f53148acf93d26a33e8.jpg"
+        text="Вау самое крутое!!!! Недавно я имел удовольствие посетить [Название мероприятия], и это было поистине исключительное событие, которое превзошло все мои ожидания. От вдохновляющих выступлений до захватывающих развлечений - это мероприятие оставило незабываемые впечатления."/>
       </div>
       <div>
         <Description title="Спикеры"/>

@@ -31,13 +31,13 @@
     font-size: 19px;
     font-weight: 400;
     color: #181818;
-    margin-top: 20px;
+    margin: 15px 0px;
 }
 
 .creat{
     display: flex;
     justify-content: space-between;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .button{

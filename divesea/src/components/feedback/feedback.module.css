@@ -1,0 +1,44 @@
+.cart {
+    width: 100%;
+    box-shadow: 15px 17px 40px #88888836;
+    border-radius: 23px;
+    padding: 25px 35px;
+    background-color: #ffffff;
+    margin: 50px 0px;
+}
+
+.input{
+    border: none;
+    font-size: 20px;
+    font-family: 400;
+    line-height: 124%;
+    color: #3C3C40;
+    background-color: #efefef00;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 50px;
+    outline: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 124%;
+    color: #141416;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.nostars{
+    display: flex;
+    justify-content: end;
+}
+
+.img{
+    width: 220px;
+    height: 78px;
+    object-fit: cover;
+    border-radius: 100px;
+}
