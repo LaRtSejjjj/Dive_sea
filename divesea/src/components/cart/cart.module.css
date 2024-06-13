@@ -20,12 +20,15 @@
 }
 
 .button {
+    text-align: center;
+    padding-top: 13px;
     width: 131px;
     height: 51px;
     background: #141416;
     border-radius: 12px;
     color: #FFFFFF;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .img {

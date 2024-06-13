@@ -9,6 +9,7 @@ import Form from './pages/form';
 import Place from './pages/place';
 import Account from './pages/account';
 import Event from './pages/event';
+import Ad from './layout/ad/ad';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/registration" element={<Registration />} />
         <Route path="/authorization" element={<Authorization />} />
       </Routes>
+      <Ad/>
       <Footer />
     </div>
   );

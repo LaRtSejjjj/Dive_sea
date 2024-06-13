@@ -27,11 +27,15 @@
 
 .menu{
     display: flex;
-    margin-left: 15px;
+    margin-left: 50px;
     font-size: 18px;
     font-weight: 500;
     color: #606060;
     gap: 70px;
+}
+
+.menu__item{
+    text-decoration: none;
 }
 
 .img{
