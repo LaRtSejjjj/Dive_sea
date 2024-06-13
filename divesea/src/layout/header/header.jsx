@@ -15,9 +15,7 @@ const Header = () => {
                         <img src={logo} alt="" />
                     </Link>
                     <div className={styles.menu}>
-                        <div className={styles.menu__item}>О НАС</div>
-                        <div className={styles.menu__item}>ЗАЯВКИ</div>
-                        <div className={styles.menu__item}>ЧАТ</div>
+                        <Link className={styles.menu__item}>ЧАТ</Link>
                     </div>
                 </div>
                 <div className="flex flex-sb flex-hc">
@@ -25,7 +23,9 @@ const Header = () => {
                         <img src={magnifier} alt="" />
                         <input type="text" id="search" placeholder="Название мероприятия" className={styles.input} />
                     </div>
-                    <img src={photo} className={styles.img} alt="" />
+                    <Link to="/account">
+                        <img src={photo} className={styles.img} alt="" />
+                    </Link>
                     <img src={bell} alt="" />
                 </div>
             </div>

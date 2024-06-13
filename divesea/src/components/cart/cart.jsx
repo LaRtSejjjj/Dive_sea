@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import people from './../../assets/img/people.svg';
 
 import styles from './cart.module.css';
 
-const Cart = ({poster, quantity, text}) => {
+const Cart = ({poster, quantity, text, link}) => {
     return (
         <div className={styles.cart}>
             <div className={styles.div}>
@@ -13,7 +14,7 @@ const Cart = ({poster, quantity, text}) => {
                         <img src={people} />
                         <p className={styles.p}>{quantity}</p>
                     </div>
-                    <button className={styles.button}>ПОСЕТИТЬ</button>
+                    <Link to={link} className={styles.button}>ПОСЕТИТЬ</Link>
                 </div>
             </div>
         </div>

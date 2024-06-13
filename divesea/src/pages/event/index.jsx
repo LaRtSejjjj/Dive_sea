@@ -1,28 +1,30 @@
+import { Link } from 'react-router-dom';
+
 import Button from '../../components/button/button';
 import Tag from '../../components/tag/tag';
 import Description from '../../components/description/description';
-import Cart from '../../components/cart/cart';
 import Text from '../../components/text/text';
+import Speaker from '../../components/speaker/speaker';
+import SpeakerBack from '../../components/speakerback/speakerback';
+import Comments from '../../components/comments/comments';
+import Feedback from '../../components/feedback/feedback';
 
 import person from './../../assets/img/person.svg';
 import arrow from './../../assets/img/arrow.svg';
 import stars from './../../assets/img/stars.svg';
 
 import styles from './event.module.css';
-import Speaker from '../../components/speaker/speaker';
-import Notice from '../../components/notice/notice';
-import SpeakerBack from '../../components/speakerback/speakerback';
-import Comments from '../../components/comments/comments';
-import Feedback from '../../components/feedback/feedback';
+
+
 
 
 const Event = () => {
   return (
     <div className={styles.wrapper}>
-      <button className={styles.arrow}>
+      <Link to="/" className={styles.arrow}>
         <img src={arrow}/>
         Мероприятие
-      </button>
+      </Link>
       <div className={styles.cart}>
         <img className={styles.img} src="https://i.pinimg.com/originals/7d/06/21/7d0621d52067878efbdb6011caa9c70d.jpg" />
         <div>

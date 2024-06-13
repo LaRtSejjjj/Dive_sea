@@ -1,3 +1,4 @@
+import Ad from '../../layout/ad/ad';
 import Cart from '../../components/cart/cart';
 import Select from '../../components/select/select';
 import Title from '../../components/title/title';
@@ -11,7 +12,7 @@ const Main = () => {
       <Title title="EVENTs" />
       <div className="flex flex-sb flex-hc">
         <div className="flex flex-sb flex-hc">
-          <Select placeholder="Введите город/регион" select="Грозный"/>
+          <Select placeholder="Введите город/регион" selec={'sdf'}/>
           <div className={styles.magnifier}>
             <img src={magnifier} alt="" />
           </div>
@@ -21,7 +22,7 @@ const Main = () => {
         </button>
       </div>
       <div className={styles.cart}>
-        <Cart poster="https://i.pinimg.com/564x/c3/52/6a/c3526a0b8a8bb4aad2d2ab24a1df95dd.jpg" 
+        <Cart link="/event" poster="https://i.pinimg.com/564x/c3/52/6a/c3526a0b8a8bb4aad2d2ab24a1df95dd.jpg" 
         quantity="200" text="Sun-Glass"/>
         <Cart poster="https://i.pinimg.com/564x/0e/f0/51/0ef0515efc9a865d9dceb55141085d8f.jpg"
         quantity="200" text="Sun-Glass"/>
