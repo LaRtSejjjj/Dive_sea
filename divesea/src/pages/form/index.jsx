@@ -1,4 +1,5 @@
 import download from './../../assets/img/download.svg';
+
 import Select from '../../components/select/select';
 import Button from '../../components/button/button';
 import Banner from '../../components/banner/banner';
@@ -7,18 +8,53 @@ import Title from '../../components/title/title';
 
 import styles from './form.module.css';
 
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { setEvents } from '../../redux/eventsSlice/eventsSlice';
 
 const Form = () => {
+    const [events, setEvent] = useState({
+        title: '',
+        description: '',
+        tag: '',
+        money: ''
+    });
+    const [err, setErr] = useState('');
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const sendData = () => {
+      if (!(events.title && events.description && events.tag && events.money)) {
+        setErr('Заполните все поля!');
+      } else {
+        setErr('');
+        navigate('/account');
+        dispatch(setEvents([...events]));
+      }
+    };
+    console.log(events);
     return (
         <div className={styles.wrapper}>
             <Title title="Создать мероприятие" />
             <div className="flex flex-sb flex-hc aling-start">
                 <div className={styles.form}>
                     <div className={styles.input}>
-                        <Input name="Название" placeholder="Введите название" />
+                        <Input
+                            name="Название"
+                            placeholder="Введите название"
+                            value={events}
+                            keyName={'title'}
+                            setValue={setEvent}
+                        />
                     </div>
                     <div className={styles.input}>
-                        <Input name="Описание" placeholder="Введите описание" />
+                        <Input
+                            name="Описание"
+                            placeholder="Введите описание"
+                            value={events}
+                            keyName={'description'}
+                            setValue={setEvent}
+                        />
                     </div>
                     <div className="flex flex-sb flex-hc">
                         <div className={styles.date}>
@@ -34,16 +70,28 @@ const Form = () => {
                         </div>
                     </div>
                     <div className={styles.input}>
-                        <Input name="Теги" placeholder="Введите тег" />
+                        <Input
+                            name="Теги"
+                            placeholder="Введите тег"
+                            value={events}
+                            keyName={'tag'}
+                            setValue={setEvent}
+                        />
                     </div>
                     <div className="flex flex-sb flex-hc">
                         <div className={styles.div}>
-                            <label htmlFor="ticket"className={styles.p}>
+                            <label htmlFor="ticket" className={styles.p}>
                                 Билеты
                             </label>
                             <div className={styles.ticket}>
                                 <Select placeholder="Формат" />
-                                <input type="text" id="ticket" placeholder="500" className={styles.money} />
+                                <input 
+                                value={events.money}
+                                type={'money'} 
+                                placeholder="500" 
+                                className={styles.money}
+                                onChange={(e) => setEvent({ ...events, money: e.target.value })}
+                                />
                             </div>
                         </div>
                         <div className={styles.input}>
@@ -55,7 +103,10 @@ const Form = () => {
                     </div>
                     <div className="flex flex-sb flex-hc aling-end">
                         <div className={styles.program}>
-                            <Input name="Зарезервировать место" placeholder="Выберите место проведения " />
+                            <Input
+                                name="Зарезервировать место"
+                                placeholder="Выберите место проведения "
+                            />
                         </div>
                         <div className={styles.button}>
                             <Button button="Зарезервировать" />
@@ -63,7 +114,10 @@ const Form = () => {
                     </div>
                     <div className="flex flex-sb flex-hc aling-end">
                         <div className={styles.program}>
-                            <Input name="Пригласить спикера " placeholder="Выберите спикера " />
+                            <Input
+                                name="Пригласить спикера "
+                                placeholder="Выберите спикера "
+                            />
                         </div>
                         <div className={styles.button}>
                             <Button button="Пригласить" />
@@ -71,14 +125,18 @@ const Form = () => {
                     </div>
                     <div className="flex flex-sb flex-hc aling-end">
                         <div className={styles.program}>
-                            <Input name="Программа" placeholder="Выберите файл" />
+                            <Input
+                                name="Программа"
+                                placeholder="Выберите файл"
+                            />
                         </div>
                         <div className={styles.button}>
                             <Button button="Загрузить" />
                         </div>
                     </div>
                     <div className={styles.creat}>
-                        <Button button="Создать" />
+                        <div className={styles.error}>{err}</div>
+                        <Button button="Создать"  onClick={sendData}/>
                     </div>
                 </div>
                 <div className={styles.banner}>

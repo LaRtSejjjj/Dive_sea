@@ -10,6 +10,7 @@ import Place from './pages/place';
 import Account from './pages/account';
 import Event from './pages/event';
 import Ad from './layout/ad/ad';
+import Bank from './pages/bank';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Header/>
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/bank" element={<Bank />} />
         <Route path="/form" element={<Form />} />
         <Route path="/place" element={<Place />} />
         <Route path="/account" element={<Account />} />

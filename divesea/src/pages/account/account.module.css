@@ -75,6 +75,7 @@
     color: #000;
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .menu{
@@ -85,6 +86,7 @@
     color: #D2D2D2;
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .link{

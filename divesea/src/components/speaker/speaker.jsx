@@ -9,10 +9,6 @@ const Speaker = ({role, quantity, name, img}) => {
                 <img src={img} className={styles.img} />
                 <div className={styles.role}>{role}</div>
                 <div className={styles.name}>{name}</div>
-                <div className="flex flex-hc">
-                    <img src={heart} />
-                    <p className={styles.p}>{quantity}</p>
-                </div>
             </div>
         </div>
     );

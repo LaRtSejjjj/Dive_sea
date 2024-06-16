@@ -1,0 +1,24 @@
+.wrapper{
+    width: 1248px;
+    margin: 150px auto 200px;
+}
+
+.button{
+    display: flex;
+    justify-content: space-between;
+    margin: 90px 0px 70px 0px;
+}
+
+.button_item{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    color: #141416;
+    font-size: 16px;
+    background-color: #ffffff00;
+    border: 3px #141416 solid;
+    border-radius: 20px;
+    font-weight: 400;
+    padding: 0px 10px;
+    cursor: pointer;
+}
