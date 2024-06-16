@@ -14,7 +14,9 @@
     justify-content: center;
     margin-bottom: 15px;
 }
-
+.input{
+    display: none;
+}
 .text {
     width: 178px;
     height: 52px;

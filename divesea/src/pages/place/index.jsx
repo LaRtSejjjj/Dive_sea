@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '../../components/button/button';
 import Description from '../../components/description/description';
 import Numbers from '../../components/numbers/numbers';
@@ -6,11 +7,45 @@ import Tag from '../../components/tag/tag';
 import Text from '../../components/text/text';
 import Title from '../../components/title/title';
 
+import Slider from 'react-slick';
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import styles from './place.module.css';
 
 const Place = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div className={styles.wrapper}>
+      <Slider {...settings}>
+        <div>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione deserunt odit expedita
+          quos excepturi minus, alias ipsa culpa itaque id laboriosam totam ad fuga perspiciatis ut
+          animi delectus, eius eos quidem! Reprehenderit exercitationem dolor fugit veniam soluta
+          aut vitae facere accusantium natus saepe quia culpa velit vel, quidem ab sunt.
+        </div>
+        <div>
+          <h3>2</h3>
+        </div>
+        <div>
+          <h3>3</h3>
+        </div>
+        <div>
+          <h3>4</h3>
+        </div>
+        <div>
+          <h3>5</h3>
+        </div>
+        <div>
+          <h3>6</h3>
+        </div>
+      </Slider>
       <div className="flex flex-sb aling-start">
         <div className={styles.description}>
           <Title title="Хайпарк ГГНТУ" />
@@ -38,7 +73,7 @@ const Place = () => {
           </div>
           <div className="flex flex-sb aling-start">
             <div className={styles.creat}>
-            <div className={styles.p}>Дата</div>
+              <div className={styles.p}>Дата</div>
             </div>
             <div className={styles.creat}>
               <div className={styles.p}>Время</div>
@@ -49,7 +84,9 @@ const Place = () => {
               </div>
             </div>
           </div>
-          <Button button="Отправить заявку"/>
+          <Link to="/form">
+            <Button button="Отправить заявку" />
+          </Link>
         </div>
       </div>
     </div>
