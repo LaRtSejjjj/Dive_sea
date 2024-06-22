@@ -1,0 +1,18 @@
+.notifications{
+    position: absolute;
+    height: 100vh;
+    width: 400px;
+    background-color: #fff;
+    right: 0;
+    top: 0;  
+    transition: .6s linear; 
+}
+
+.hidden{
+    pointer-events: none;
+    transform: translateX(400px);
+}
+
+.show{
+    transform: translateX(0);
+}

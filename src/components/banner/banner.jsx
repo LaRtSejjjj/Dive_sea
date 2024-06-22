@@ -1,19 +1,24 @@
 import styles from './banner.module.css';
 
 const Banner = ({ download, text, value, setValue }) => {
+  console.log();
   return (
     <label className={styles.banner}>
-      <div className={styles.div}>
-        <div className={styles.img}>
-          <img src={download} alt="" />
+      {value ? (
+        <img src={value} alt="" className={styles.image} />
+      ) : (
+        <div className={styles.div}>
+          <div className={styles.img}>
+            <img src={download} alt="" />
+          </div>
+          <div className={styles.text}>{text}</div>
         </div>
-        <div className={styles.text}>{text}</div>
-      </div>
+      )}
+
       <input
         type="file"
         className={styles.input}
-        value={value.file}
-        onChange={(e) => setValue({ ...value, file: e.target.value })}
+        onChange={(e) => setValue({ ...value, file: './' + e.target.value.substring(11) })}
       />
     </label>
   );

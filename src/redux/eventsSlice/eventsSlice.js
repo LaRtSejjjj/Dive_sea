@@ -4,6 +4,7 @@ export const eventsSlice = createSlice({
   name: 'events',
   initialState: {
     events: {
+      status: 'wait',
       title: '',
       description: '',
       tag: '',
@@ -15,6 +16,7 @@ export const eventsSlice = createSlice({
       timeStart: '',
       timeEnd: '',
       format: '',
+      hall: '',
     },
   },
   reducers: {

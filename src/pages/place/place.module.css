@@ -62,22 +62,7 @@
     gap: 20px;
 }
 
-.img{
-    height: 800px;
-    object-fit: cover;
-    border-radius: 20px;
-    margin: auto;
-}
-.img_div{
-    opacity: 0.9;
-    width: 100%;
-    height: 800px;
-    outline: none;
-    border-radius: 20px;
-}
-.slider{
-    margin-bottom: 150px;
-}
+
 
 .price{
     margin-bottom: 50px;
@@ -92,4 +77,47 @@
 .price_text{
     font-size: 25px;
     font-weight: 600;
+}
+
+.relative{
+    position: relative;
+}
+.modal__wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.modal{
+    width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px #969696;
+    border-radius: 20px;
+    padding: 40px 60px;
+}
+
+.modal__title{
+    font-size: 30px;
+    color: #141416;
+    font-weight: 600;
+    text-align: center;
+}
+
+.modal__subtitle{
+    margin: 30px 0 50px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
 }

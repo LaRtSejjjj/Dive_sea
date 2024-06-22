@@ -24,11 +24,17 @@ const Form = () => {
   const [event, setEvent] = useState(events);
   const [date, setDate] = useState();
   const [err, setErr] = useState('');
+  const [places, setPlaces] = useState([
+    'ХайПарк ГГНТУ',
+    'ТехноПарк ЧГУ',
+    'Актовый зал ГГНТУ',
+    'Актовый зал ЧГУ',
+  ]);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const sendData = () => {
-    if (!(event.title && event.description && event.tag && event.money)) {
+    if (!(events.title && events.description && events.tag && events.money)) {
       setErr('Заполните все поля!');
     } else {
       setErr('');
@@ -37,7 +43,7 @@ const Form = () => {
     }
   };
   useEffect(() => {
-    dispatch(setEvents(event));
+    dispatch(setEvents({ ...events, ...event }));
   }, [event]);
   useEffect(() => {
     setEvent({ ...event, date: new Date(date).toLocaleString().substring(0, 10) });
@@ -95,10 +101,7 @@ const Form = () => {
             <div className={styles.input}>
               <div className={styles.p}>Формат</div>
               <div className={styles.text}>
-                <Select 
-                placeholder="Формат" 
-                options={['Онлайн', 'Оффлайн']} 
-                />
+                <Select placeholder="Формат" options={['Онлайн', 'Оффлайн']} />
               </div>
             </div>
           </div>
@@ -112,12 +115,13 @@ const Form = () => {
                   <Combobox
                     hideCaret
                     hideEmptyPopup
-                    data={[
-                      'ХайПарк ГГНТУ',
-                      'ТехноПарк ЧГУ',
-                      'Актовый зал ГГНТУ',
-                      'Актовый зал ЧГУ',
-                    ]}
+                    data={places}
+                    defaultValue={events.place}
+                    onSelect={(value) =>
+                      setEvent((prev) => {
+                        return { ...prev, place: value };
+                      })
+                    }
                     placeholder="Выберите место проведения"
                   />
                 </div>
@@ -129,18 +133,15 @@ const Form = () => {
           </div>
           <div className="flex flex-sb flex-hc aling-end">
             <div className={styles.program}>
-            <div className={styles.label}>Пригласить спикера</div>
+              <div className={styles.label}>Пригласить спикера</div>
               <div className={styles.combobox}>
                 <Combobox
                   name="Пригласить спикера "
                   placeholder="Выберите спикера "
                   hideCaret
                   hideEmptyPopup
-                  data={[
-                    'Макка Межиева',
-                    'Мадина Юсупова'
-                  ]}
-                  />
+                  data={['Макка Межиева', 'Мадина Юсупова']}
+                />
               </div>
             </div>
             <div className={styles.button}>
@@ -153,9 +154,7 @@ const Form = () => {
               <div className={styles.program_file} placeholder="Выберите файл">
                 <input
                   className={styles.input_file}
-                  value={event.program}
                   type={'file'}
-                  
                   onChange={(e) => setEvent({ ...event, program: e.target.value })}
                 />
               </div>

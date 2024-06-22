@@ -1,0 +1,17 @@
+.img{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: auto;
+}
+.img_div{
+    opacity: 0.9;
+    width: 100%;
+    outline: none;
+    border-radius: 20px;
+}
+
+.slider{
+    margin-bottom: 150px;
+}
