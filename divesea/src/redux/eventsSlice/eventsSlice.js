@@ -9,7 +9,12 @@ export const eventsSlice = createSlice({
       tag: '',
       money: '',
       date: '',
+      program: '',
       file: '',
+      speaker: '',
+      timeStart: '',
+      timeEnd: '',
+      format: '',
     },
   },
   reducers: {

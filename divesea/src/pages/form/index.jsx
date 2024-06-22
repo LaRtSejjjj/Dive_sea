@@ -67,19 +67,6 @@ const Form = () => {
               setValue={setEvent}
             />
           </div>
-          <div className="flex flex-sb flex-hc">
-            <div className={styles.date}>
-              <div className={styles.p}>Дата</div>
-              <DatePicker onChange={setDate} value={date} />
-            </div>
-            {/* <div className={styles.time}>
-              <div className={styles.p}>Время</div>
-              <div className={styles.text}>
-                <Select placeholder="Начало" />
-                <Select placeholder="Конец" />
-              </div>
-            </div> */}
-          </div>
           <div className={styles.input}>
             <Input
               name="Теги"
@@ -95,7 +82,7 @@ const Form = () => {
                 Билеты
               </label>
               <div className={styles.ticket}>
-                <Select placeholder="Формат" />
+                <Select placeholder="Формат" options={['$', '₽']} />
                 <input
                   value={event.money}
                   type={'money'}
@@ -108,7 +95,10 @@ const Form = () => {
             <div className={styles.input}>
               <div className={styles.p}>Формат</div>
               <div className={styles.text}>
-                <Select placeholder="Формат" options={['Онлайн', 'Оффлайн']} />
+                <Select 
+                placeholder="Формат" 
+                options={['Онлайн', 'Оффлайн']} 
+                />
               </div>
             </div>
           </div>
@@ -139,15 +129,36 @@ const Form = () => {
           </div>
           <div className="flex flex-sb flex-hc aling-end">
             <div className={styles.program}>
-              <Input name="Пригласить спикера " placeholder="Выберите спикера " />
+            <div className={styles.label}>Пригласить спикера</div>
+              <div className={styles.combobox}>
+                <Combobox
+                  name="Пригласить спикера "
+                  placeholder="Выберите спикера "
+                  hideCaret
+                  hideEmptyPopup
+                  data={[
+                    'Макка Межиева',
+                    'Мадина Юсупова'
+                  ]}
+                  />
+              </div>
             </div>
             <div className={styles.button}>
               <Button button="Пригласить" />
             </div>
           </div>
           <div className="flex flex-sb flex-hc aling-end">
-            <div className={styles.program}>
-              <Input name="Программа" placeholder="Выберите файл" />
+            <div className={styles.lable_div}>
+              <div className={styles.label}>Программа</div>
+              <div className={styles.program_file} placeholder="Выберите файл">
+                <input
+                  className={styles.input_file}
+                  value={event.program}
+                  type={'file'}
+                  
+                  onChange={(e) => setEvent({ ...event, program: e.target.value })}
+                />
+              </div>
             </div>
             <div className={styles.button}>
               <Button button="Загрузить" />
@@ -159,12 +170,18 @@ const Form = () => {
           </div>
         </div>
         <div className={styles.banner}>
+          {event.file ? 
+          <div className={styles.banner_div}> 
+          <img src={event.file} alt=''/>
+          </div>
+          :
           <Banner
             download={download}
             text="PNG, GIF, WEBP, MP4 or MP3. Max 1Gb."
             value={event.file}
             setValue={setEvent}
           />
+          }
           <div className={styles.download}>
             <Button button="Загрузить" />
           </div>
