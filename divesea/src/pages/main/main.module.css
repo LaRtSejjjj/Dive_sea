@@ -33,12 +33,12 @@
     background-color: black;
     border-radius: 12px;
     cursor: pointer;
-    width: 55px;
-    height: 57px;
+    width: 65px;
+    height: 67px;
 }
 
 .button{
-    height: 57px;
+    height: 67px;
     font-size: 16px;
     background-color: rgba(255, 255, 255, 0);
     border: 3px solid #1A202C;

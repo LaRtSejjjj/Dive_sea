@@ -12,7 +12,10 @@ const Main = () => {
       <Title title="EVENTs" />
       <div className="flex flex-sb flex-hc">
         <div className="flex flex-sb flex-hc">
-          <Select />
+          <Select 
+            placeholder="Формат"
+            options={['Грозный', 'Москва', 'Уфа']} 
+          />
           <div className={styles.magnifier}>
             <img src={magnifier} alt="" />
           </div>

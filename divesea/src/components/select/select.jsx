@@ -6,7 +6,7 @@ const Select = ({ items, options }) => {
       <select className={styles.select}>
         {options &&
           options.map((item, i) => (
-            <option key={i} value={item}>
+            <option key={i} value={item} className={styles.option}>
               {item}
             </option>
           ))}

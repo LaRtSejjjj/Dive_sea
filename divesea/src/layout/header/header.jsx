@@ -16,6 +16,7 @@ const Header = () => {
                     </Link>
                     <div className={styles.menu}>
                         <Link className={styles.menu__item}>ЧАТ</Link>
+                        <Link to='bank' className={styles.menu__item}>БАНК ИДЕЙ</Link>
                     </div>
                 </div>
                 <div className="flex flex-sb flex-hc">

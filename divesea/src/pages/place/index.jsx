@@ -118,7 +118,6 @@ const Place = () => {
                   type={'time'}
                   placeholder="Выберите файл"
                   onChange={(e) => setEvent({ ...event, timeStart: e.target.value })}
-                  min="8:00" max="18:00"
                 />
                 <input
                   className={styles.time}
@@ -126,7 +125,6 @@ const Place = () => {
                   type={'time'}
                   placeholder="Выберите файл"
                   onChange={(e) => setEvent({ ...event, timeEnd: e.target.value })}
-                  min="8:00" max="18:00"
                 />
               </div>
             </div>

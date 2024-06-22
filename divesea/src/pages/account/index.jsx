@@ -5,8 +5,12 @@ import Numbers from '../../components/numbers/numbers';
 
 import styles from './account.module.css';
 import { useState } from 'react';
+import Event from '../event';
+import { useSelector } from 'react-redux';
 
 const Account = () => {
+    const events = useSelector((state) => state.events.events);
+    const [event, setEvent] = useState(events);
     const [activeTab, setActiveTab] = useState("organizer");
 
     const handleTabClick = (tab) => {
@@ -57,6 +61,13 @@ const Account = () => {
                                 quantity="200" text="Sun-Glass" />
                             <Cart poster="https://i.pinimg.com/564x/0e/f0/51/0ef0515efc9a865d9dceb55141085d8f.jpg"
                                 quantity="200" text="Sun-Glass" />
+                            {event.title &&
+                            <Cart 
+                            poster={event.file}
+                            quantity="0" 
+                            text={event.title} 
+                            />
+                            }
                         </div>
                         :
                         <div className={styles.cart}>
@@ -65,7 +76,7 @@ const Account = () => {
                             <Cart poster="https://i.pinimg.com/564x/6a/94/1d/6a941d5672e580706178319cc69d6151.jpg"
                                 quantity="200" text="Sun-Glass" />
                             <Cart poster="https://i.pinimg.com/564x/5e/fe/b4/5efeb4c5ebef5c47c8ddbfabe627ad53.jpg"
-                                quantity="200" text="Sun-Glass" />
+                                quantity="200" text={event.title}/>
                         </div>}
                 </div>
             </div>

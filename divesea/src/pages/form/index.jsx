@@ -28,7 +28,7 @@ const Form = () => {
   const dispatch = useDispatch();
 
   const sendData = () => {
-    if (!(event.title && event.description && event.tag && event.money && event.date)) {
+    if (!(event.title && event.description && event.tag && event.money)) {
       setErr('Заполните все поля!');
     } else {
       setErr('');
@@ -170,18 +170,12 @@ const Form = () => {
           </div>
         </div>
         <div className={styles.banner}>
-          {event.file ? 
-          <div className={styles.banner_div}> 
-          <img src={event.file} alt=''/>
-          </div>
-          :
           <Banner
             download={download}
             text="PNG, GIF, WEBP, MP4 or MP3. Max 1Gb."
             value={event.file}
             setValue={setEvent}
           />
-          }
           <div className={styles.download}>
             <Button button="Загрузить" />
           </div>
