@@ -17,6 +17,7 @@ export const eventsSlice = createSlice({
       timeEnd: '',
       format: '',
       hall: '',
+      ticket: '',
     },
   },
   reducers: {

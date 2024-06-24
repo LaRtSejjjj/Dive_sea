@@ -65,6 +65,23 @@
 .input{
     margin-top: 50px;
 }
+.input_tag{
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.tag{
+    width: 250px;
+}
+.tag1{
+    width: 250px;
+    margin-top: 25px;
+}
+
+.input_d{
+    margin-top: 50px;
+}
 
 .date{
     margin-top: 50px;
@@ -109,6 +126,11 @@
     display: flex;
     justify-content: space-between;
     padding: 23px 27px;
+    cursor: pointer;
+}
+
+.input_file{
+    display: none;
 }
 
 .label{
@@ -135,4 +157,16 @@
     justify-content: center;
     cursor: pointer;
     
+}
+
+.program_div{
+    font-size: 17px;
+    line-height: 124%;
+    color: #010101;
+}
+
+.program_placeholder{
+    font-size: 17px;
+    line-height: 124%;
+    color: #9596A6;
 }

@@ -48,6 +48,9 @@
     cursor: pointer;
 }
 
+.format{
+    width: 250px;
+}
 /*cart*/
 .cart{
     width: 100%;
@@ -56,3 +59,4 @@
     gap: 40px;
     margin-top: 70px;
 }
+

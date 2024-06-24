@@ -1,18 +1,24 @@
 .notifications{
     position: absolute;
     height: 100vh;
-    width: 400px;
+    width: 500px;
     background-color: #fff;
     right: 0;
     top: 0;  
     transition: .6s linear; 
+    padding: 50px;
+    z-index: 1000;
 }
 
 .hidden{
     pointer-events: none;
-    transform: translateX(400px);
+    transform: translateX(500px);
 }
 
 .show{
     transform: translateX(0);
+}
+
+.notice{
+    margin: 0 auto;
 }

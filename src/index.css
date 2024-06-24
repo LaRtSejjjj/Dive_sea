@@ -36,7 +36,9 @@ h1, h2, h3, h4, h5, h6{
 .flex-sb{
   justify-content: space-between;
 }
-
+.flex-ed{
+  justify-content: end;
+}
 .flex-hc{
   align-items: center;
 }
@@ -93,6 +95,7 @@ h1, h2, h3, h4, h5, h6{
   height: 100vh;
   top: 0;
   left: 0;
+  z-index: 1000;
 }
 
 .show{

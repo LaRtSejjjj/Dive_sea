@@ -2,7 +2,7 @@ import close from './../../assets/img/close.svg';
 
 import styles from './notice.module.css';
 
-const Notice = ({text, data, img}) => {
+const Notice = ({text, date, img}) => {
     return (
         <div className={styles.cart}>
             <div className={styles.img}>
@@ -12,7 +12,7 @@ const Notice = ({text, data, img}) => {
                 <img src={img}/>
                 <div className={styles.text}>
                     <div className={styles.h4}>{text}</div>
-                    <div className={styles.p}>{data}</div>
+                    <div className={styles.p}>{date}</div>
                 </div>
             </div>
         </div>

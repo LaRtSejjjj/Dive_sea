@@ -1,6 +1,5 @@
 .cart {
     width: 400px;
-    height: 95px;
     box-shadow: 15px 17px 40px #88888836;
     border-radius: 12px;
     padding: 20px 30px;
@@ -22,6 +21,7 @@
     color: #000;
     font-size: 17px;
     font-weight: 600;
+    margin-bottom: 5px;
 }
 
 .p{

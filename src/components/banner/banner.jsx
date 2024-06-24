@@ -5,7 +5,9 @@ const Banner = ({ download, text, value, setValue }) => {
   return (
     <label className={styles.banner}>
       {value ? (
-        <img src={value} alt="" className={styles.image} />
+          <div className={styles.image_div}>
+            <img src={value} alt="" className={styles.image} />
+          </div>
       ) : (
         <div className={styles.div}>
           <div className={styles.img}>

@@ -89,7 +89,7 @@
 }
 
 .modal{
-    width: 600px;
+    width: 700px;
     margin: 0 auto;
     background-color: #fff;
     box-shadow: 1px 1px 3px #969696;
@@ -105,8 +105,8 @@
 }
 
 .modal__subtitle{
-    margin: 30px 0 50px;
-    color: #000;
+    margin: 30px 0 40px;
+    color: #464646;
     font-size: 20px;
     font-weight: 400;
     text-align: center;
@@ -120,4 +120,9 @@
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, .2);
+}
+
+.modal__btn{
+    margin: 0 auto;
+    width: 50%;
 }

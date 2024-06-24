@@ -14,6 +14,8 @@ import arrow from './../../assets/img/arrow.svg';
 import stars from './../../assets/img/stars.svg';
 
 import styles from './event.module.css';
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 
 
@@ -80,12 +82,13 @@ const Event = () => {
         </div>
       </div>
       <div>
-        <Comments />
+        <div className={styles.comments}>
+          <Comments /></div>
         <Feedback name="Егор"
         img="https://i.pinimg.com/564x/6d/43/12/6d43125cf7192f53148acf93d26a33e8.jpg"
         text="Вау самое крутое!!!! Недавно я имел удовольствие посетить [Название мероприятия], и это было поистине исключительное событие, которое превзошло все мои ожидания. От вдохновляющих выступлений до захватывающих развлечений - это мероприятие оставило незабываемые впечатления."/>
       </div>
-      <div>
+      <div className={styles.speaker_m}>
         <Description title="Спикеры"/>
         <div className={styles.speaker}>
           <Speaker img="https://i.pinimg.com/originals/a7/4d/ed/a74ded8b3868396d05fde493923ddae0.png" 

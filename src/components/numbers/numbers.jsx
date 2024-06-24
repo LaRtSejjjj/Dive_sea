@@ -1,7 +1,7 @@
 
 import styles from './numbers.module.css';
 
-const Numbers = ({number, text}) => {
+const Numbers = ({number, text,ticket}) => {
     return (
         <div>
             <div className={styles.h1}>{number}</div>

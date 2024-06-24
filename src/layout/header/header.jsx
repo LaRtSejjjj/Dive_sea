@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
 import logo from './../../assets/img/black-logo.svg';
 import bell from './../../assets/img/bell.svg';
 import magnifier from './../../assets/img/magnifier.svg';
 import photo from './../../assets/img/photo.svg';
+
+import { Link } from 'react-router-dom';
 
 import styles from './header.module.css';
 
@@ -34,7 +35,9 @@ const Header = ({ setIsOpen }) => {
           <Link to="/account">
             <img src={photo} className={styles.img} alt="" />
           </Link>
+          <div>
           <img src={bell} alt="" onClick={() => setIsOpen(true)} />
+          </div>
         </div>
       </div>
     </div>

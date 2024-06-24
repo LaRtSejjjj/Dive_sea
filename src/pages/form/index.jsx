@@ -23,12 +23,18 @@ const Form = () => {
   const events = useSelector((state) => state.events.events);
   const [event, setEvent] = useState(events);
   const [date, setDate] = useState();
+  const [ticket, setTicket] = useState('₽');
+  const [format, setFormat] = useState('Оффлайн');
   const [err, setErr] = useState('');
   const [places, setPlaces] = useState([
     'ХайПарк ГГНТУ',
     'ТехноПарк ЧГУ',
     'Актовый зал ГГНТУ',
     'Актовый зал ЧГУ',
+  ]);
+  const [speakers, setSpeaker] = useState([
+    'Макка Межиева',
+    'Мадина Юсупова',
   ]);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -46,7 +52,7 @@ const Form = () => {
     dispatch(setEvents({ ...events, ...event }));
   }, [event]);
   useEffect(() => {
-    setEvent({ ...event, date: new Date(date).toLocaleString().substring(0, 10) });
+    setEvent({ ...event, date: new Date(date).toLocaleString().substring(0, 10), ticket, format });
   }, [date]);
 
   console.log(events);
@@ -64,7 +70,7 @@ const Form = () => {
               setValue={setEvent}
             />
           </div>
-          <div className={styles.input}>
+          <div className={styles.input_d}>
             <Input
               name="Описание"
               placeholder="Введите описание"
@@ -73,14 +79,36 @@ const Form = () => {
               setValue={setEvent}
             />
           </div>
-          <div className={styles.input}>
-            <Input
-              name="Теги"
-              placeholder="Введите тег"
-              value={event}
-              keyName={'tag'}
-              setValue={setEvent}
-            />
+          <div className={styles.input_tag}>
+            <div className={styles.tag}>
+              <Input
+                name="Теги"
+                placeholder="Введите тег"
+                value={event}
+                keyName={'tag'}
+                setValue={setEvent}
+              />
+            </div>
+            {event.tag &&
+              <div className={styles.tag1}>
+                <Input
+                  placeholder="Введите тег"
+                  value={event}
+                  keyName={'tag1'}
+                  setValue={setEvent}
+                />
+              </div>
+            }
+            {event.tag1 &&
+              <div className={styles.tag}>
+                <Input
+                  placeholder="Введите тег"
+                  value={event}
+                  keyName={'tag2'}
+                  setValue={setEvent}
+                />
+              </div>
+            }
           </div>
           <div className="flex flex-sb flex-hc">
             <div className={styles.div}>
@@ -88,7 +116,12 @@ const Form = () => {
                 Билеты
               </label>
               <div className={styles.ticket}>
-                <Select placeholder="Формат" options={['$', '₽']} />
+                <Select
+                  placeholder="Формат"
+                  options={['₽', '$']}
+                  value={ticket}
+                  setValue={setTicket}
+                />
                 <input
                   value={event.money}
                   type={'money'}
@@ -101,7 +134,12 @@ const Form = () => {
             <div className={styles.input}>
               <div className={styles.p}>Формат</div>
               <div className={styles.text}>
-                <Select placeholder="Формат" options={['Онлайн', 'Оффлайн']} />
+                <Select
+                  placeholder="Формат"
+                  options={['Оффлайн', 'Онлайн']}
+                  value={format}
+                  setValue={setFormat}
+                />
               </div>
             </div>
           </div>
@@ -140,7 +178,13 @@ const Form = () => {
                   placeholder="Выберите спикера "
                   hideCaret
                   hideEmptyPopup
-                  data={['Макка Межиева', 'Мадина Юсупова']}
+                  data={speakers}
+                  defaultValue={events.speaker}
+                  onSelect={(value) =>
+                    setEvent((prev) => {
+                      return { ...prev, speaker: value };
+                    })
+                  }
                 />
               </div>
             </div>
@@ -148,16 +192,45 @@ const Form = () => {
               <Button button="Пригласить" />
             </div>
           </div>
+          {event.speaker &&
+            <div className="flex flex-sb flex-hc aling-end">
+              <div className={styles.program}>
+                <div className={styles.combobox}>
+                  <Combobox
+                    name="Пригласить спикера "
+                    placeholder="Выберите спикера "
+                    hideCaret
+                    hideEmptyPopup
+                    data={speakers}
+                    defaultValue={events.speaker}
+                    onSelect={(value) =>
+                      setEvent((prev) => {
+                        return { ...prev, speaker: value };
+                      })
+                    }
+                  />
+                </div>
+              </div>
+              <div className={styles.button}>
+                <Button button="Пригласить" />
+              </div>
+            </div>
+          }
           <div className="flex flex-sb flex-hc aling-end">
             <div className={styles.lable_div}>
               <div className={styles.label}>Программа</div>
-              <div className={styles.program_file} placeholder="Выберите файл">
+              <label className={styles.program_file} placeholder="Выберите файл">
+                {!event.program ?
+                  <div className={styles.program_placeholder}>Выберите файл</div>
+                  :
+                  <div className={styles.program_div}>Программа</div>
+                }
                 <input
                   className={styles.input_file}
                   type={'file'}
                   onChange={(e) => setEvent({ ...event, program: e.target.value })}
                 />
-              </div>
+              </label>
             </div>
             <div className={styles.button}>
               <Button button="Загрузить" />

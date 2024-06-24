@@ -13,9 +13,10 @@ import Event from './pages/event';
 import Ad from './layout/ad/ad';
 import Bank from './pages/bank';
 import Notifications from './layout/notifications';
+import Mero from './pages/mero/mero';
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false );
   return (
     <div className="App">
       <Header setIsOpen={setIsOpen} />
@@ -26,6 +27,7 @@ const App = () => {
       <Notifications isOpen={isOpen} />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/mero" element={<Mero />} />
         <Route path="/bank" element={<Bank />} />
         <Route path="/form" element={<Form />} />
         <Route path="/place" element={<Place />} />
@@ -34,7 +36,6 @@ const App = () => {
         <Route path="/registration" element={<Registration />} />
         <Route path="/authorization" element={<Authorization />} />
       </Routes>
-      <Ad />
       <Footer />
     </div>
   );
